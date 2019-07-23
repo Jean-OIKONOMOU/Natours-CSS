@@ -6,3 +6,20 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/* ! Small CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ? without this the padding and border gets added to the total height/width of an element.*/
+}
+
+body {
+    font: 400 16px/1.7 "Lato", sans-serif;
+    color: #777777;
+}
+
+.header {
+    height: 95vh;
+}
