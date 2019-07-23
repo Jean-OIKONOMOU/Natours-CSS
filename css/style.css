@@ -22,4 +22,7 @@ body {
 
 .header {
     height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(236, 110, 173, 0.666), rgba(52, 147, 230, 0.666)), url('../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
 }
