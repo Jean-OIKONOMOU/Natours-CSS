@@ -17,12 +17,20 @@ Dark green: #28b485
 
 body {
     font: 400 16px/1.7 "Lato", sans-serif;
-    color: #777777;
+    /* color: #777777; */
+    color: white;
+    padding: 20px;
 }
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(236, 110, 173, 0.666), rgba(52, 147, 230, 0.666)), url('../img/hero.jpg');
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(236, 110, 173, 0.666), 
+        rgba(52, 147, 230, 0.666)), 
+        url('../img/hero.jpg');
     background-size: cover;
     background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%);
+    /* https://bennettfeely.com/clippy/ for a clip-path GUI */
 }
