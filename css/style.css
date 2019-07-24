@@ -109,11 +109,12 @@ body {
     margin-top: 2rem;
     border-radius: 100993px;
     transition: all .2s ease-in-out;
+    position: relative;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 22px rgba(0,0,0,.5);
+    /* box-shadow: 0 10px 22px rgba(0,0,0,.5); */
 }
 
 .btn:active {
@@ -124,6 +125,30 @@ body {
 .btn-white {
     background-color: white;
     color: black;
+}
+
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100993px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 22px rgba(0,0,0,.5);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.btn-white::after {
+    background-color: white;
+    color: black;
+}
+
+.btn:hover::after {
+    opacity: 1;
 }
 
 @media only screen and (max-width: 767px) {
