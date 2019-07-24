@@ -46,9 +46,14 @@ body {
     position: absolute;
     top: 40px;
     left: 40px;
-    animation-name: moveInTop;
+    animation-name: scaleToNormal;
     animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-out;
+    transition: all .2s ease-in-out;
+}
+
+.logo-box:hover {
+    transform: scale(1.2, 1.2);
 }
 
 .logo {
@@ -136,19 +141,15 @@ body {
     }
 }
 
-@keyframes moveInTop {
+@keyframes scaleToNormal {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: scale(0, 0);
     }
 
-    80% {
-        opacity: 0.8;
-        transform: translateY(-10px);
-    }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1, 1);
     }
 }
