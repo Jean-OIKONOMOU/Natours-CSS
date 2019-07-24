@@ -40,6 +40,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .logo-box {
@@ -63,8 +64,8 @@ body {
 .text-box {
     text-transform: uppercase;
     color: white;
-    text-align: center;
     backface-visibility: hidden;
+    text-align: center;
 }
 
 .heading-primary-main {
@@ -89,6 +90,49 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.1s;
+    transition: box-shadow .2s ease;
+}
+
+.heading-primary-sub:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 30px rgba(255,255,255,0.15);
+    border-radius: 1rem;
+}
+
+/*
+@keyframes pulse {
+    0% {background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 0 30px rgba(255,255,255,0.15);
+        border-radius: 1rem;}
+}
+
+.heading-primary-sub:hover {
+    box-shadow: 0 0 0 5px rgb(#fff) , 0 0 0 10px  #f05f75;
+} 
+*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 16px 40px;
+    margin-top: 2rem;
+    border-radius: 100993px;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: white;
+    color: black;
 }
 
 @media only screen and (max-width: 767px) {
@@ -152,4 +196,30 @@ body {
         opacity: 1;
         transform: scale(1, 1);
     }
+}
+
+span {
+    position: relative;
+    color: blue;
+    cursor: pointer;
+}
+
+span:hover:before {
+    opacity: 1;
+}
+
+span:before {
+    text-transform: none;
+    content: attr(aria-label);
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    right: -90px;
+    font-size: 14px;
+    width: 100px;
+    padding: 10px;
+    color: #fff;
+    background-color: #555;
+    border-radius: 3px;
+    pointer-events: none;
 }
